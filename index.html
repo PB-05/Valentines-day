@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Valentine's Day</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #ffe6e6;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            overflow: hidden;
+        }
+        h1 {
+            color: #ff4d4d;
+            font-size: 3rem;
+        }
+        p {
+            font-size: 1.5rem;
+            color: #333;
+        }
+        .container {
+            position: relative;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        .flower, .butterfly {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            animation: float 5s infinite ease-in-out;
+        }
+        .flower {
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/a/ac/Simple_red_flower.svg');
+            background-size: cover;
+        }
+        .butterfly {
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/e/e6/Butterfly_icon.svg');
+            background-size: cover;
+        }
+        /* Flower and Butterfly Positions */
+        .flower1 { top: 10%; left: 10%; animation-delay: 0s; }
+        .flower2 { top: 20%; right: 15%; animation-delay: 1s; }
+        .flower3 { bottom: 15%; left: 5%; animation-delay: 2s; }
+        .butterfly1 { top: 30%; left: 70%; animation-delay: 0.5s; }
+        .butterfly2 { bottom: 20%; right: 20%; animation-delay: 1.5s; }
+        .butterfly3 { top: 5%; right: 5%; animation-delay: 2.5s; }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Happy Valentine's Day</h1>
+        <p>Lots of love from Pooja ❤️</p>
+    </div>
+    <!-- Decorative Elements -->
+    <div class="flower flower1"></div>
+    <div class="flower flower2"></div>
+    <div class="flower flower3"></div>
+    <div class="butterfly butterfly1"></div>
+    <div class="butterfly butterfly2"></div>
+    <div class="butterfly butterfly3"></div>
+</body>
+</html>
