@@ -16,14 +16,18 @@
             text-align: center;
             overflow: hidden;
         }
+
         h1 {
             color: #ff4d4d;
             font-size: 3rem;
+            margin-bottom: 10px;
         }
+
         p {
             font-size: 1.5rem;
             color: #333;
         }
+
         .container {
             position: relative;
             padding: 20px;
@@ -31,31 +35,52 @@
             border-radius: 15px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
+
         .flower, .butterfly {
             position: absolute;
+            animation: float 5s infinite ease-in-out, bloom 3s infinite;
+        }
+
+        /* Flower Styles */
+        .flower {
             width: 80px;
             height: 80px;
-            animation: float 5s infinite ease-in-out;
-        }
-        .flower {
             background-image: url('https://upload.wikimedia.org/wikipedia/commons/a/ac/Simple_red_flower.svg');
             background-size: cover;
+            transform-origin: center;
         }
+
+        .flower1 { top: 10%; left: 15%; animation-delay: 0s; }
+        .flower2 { top: 60%; right: 10%; animation-delay: 1s; }
+        .flower3 { bottom: 10%; left: 5%; animation-delay: 2s; }
+
+        /* Butterfly Styles */
         .butterfly {
+            width: 50px;
+            height: 50px;
             background-image: url('https://upload.wikimedia.org/wikipedia/commons/e/e6/Butterfly_icon.svg');
             background-size: cover;
         }
-        /* Flower and Butterfly Positions */
-        .flower1 { top: 10%; left: 10%; animation-delay: 0s; }
-        .flower2 { top: 20%; right: 15%; animation-delay: 1s; }
-        .flower3 { bottom: 15%; left: 5%; animation-delay: 2s; }
+
         .butterfly1 { top: 30%; left: 70%; animation-delay: 0.5s; }
         .butterfly2 { bottom: 20%; right: 20%; animation-delay: 1.5s; }
         .butterfly3 { top: 5%; right: 5%; animation-delay: 2.5s; }
 
+        /* Animations */
         @keyframes float {
             0%, 100% { transform: translateY(0); }
             50% { transform: translateY(-20px); }
+        }
+
+        @keyframes bloom {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+
+        @keyframes fly {
+            0% { transform: translateX(0) translateY(0) rotate(0deg); }
+            50% { transform: translateX(-20px) translateY(-30px) rotate(10deg); }
+            100% { transform: translateX(0) translateY(0) rotate(0deg); }
         }
     </style>
 </head>
@@ -64,10 +89,13 @@
         <h1>Happy Valentine's Day</h1>
         <p>Lots of love from Pooja ❤️</p>
     </div>
-    <!-- Decorative Elements -->
+
+    <!-- Dynamic Flowers -->
     <div class="flower flower1"></div>
     <div class="flower flower2"></div>
     <div class="flower flower3"></div>
+
+    <!-- Flying Butterflies -->
     <div class="butterfly butterfly1"></div>
     <div class="butterfly butterfly2"></div>
     <div class="butterfly butterfly3"></div>
